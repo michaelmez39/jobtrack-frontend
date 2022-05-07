@@ -1,27 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import {Application, Status} from './Application/Application';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <article>
-        I am relearning about react and typescript!
-      </article>
+      <div className="application-view">
+        <Application title="Super Hero" status={Status.Applied}/>
+        <Application title="Programmer" status={Status.Accepted}/>
+      </div>
+      <div className="application-details">
+        Edit Application details!
+        Notes,
+        link to application website,
+        phone number,
+        link to corporate website,
+        date applied,
+        location,
+        salary
+      </div>
     </div>
   );
 }
